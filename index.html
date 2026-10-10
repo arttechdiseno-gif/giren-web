@@ -24,9 +24,7 @@
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1090436270626395&ev=PageView&noscript=1"
   /></noscript>
-  <!-- ============================================================ -->
-  <!-- END META PIXEL CODE                                          -->
-  <!-- ============================================================ -->
+  <!-- END META PIXEL CODE -->
 
   <style>
     /* ---------- RESET Y BASE ---------- */
@@ -54,8 +52,12 @@
       padding: 16px 0;
       border-bottom: 2px solid #111;
       background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 50;
     }
     .topbar .container {
+      max-width: 1100px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -76,6 +78,30 @@
       width: 12px;
       height: 28px;
       background: #FFD400;
+    }
+
+    /* ---------- NAVEGACIÓN EN TOPBAR ---------- */
+    .topbar .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .topbar .nav-links a.nav-item {
+      font-size: 0.9rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      color: #111;
+      transition: background .15s ease, color .15s ease;
+    }
+    .topbar .nav-links a.nav-item:hover {
+      background: #FFD400;
+    }
+    .topbar .nav-links a.nav-item.active {
+      background: #111;
+      color: #FFD400;
     }
 
     /* ---------- ICONOS SOCIALES EN TOPBAR ---------- */
@@ -800,7 +826,12 @@
       }
       .benefits h3 { font-size: 1.1rem; }
 
-      .topbar .logo { font-size: 1.25rem; }
+      .topbar .logo { font-size: 1.15rem; }
+      .topbar .nav-links a.nav-item {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        letter-spacing: 0.5px;
+      }
       .topbar .social-links a {
         width: 34px;
         height: 34px;
@@ -827,12 +858,16 @@
 </head>
 <body>
 
-  <!-- BARRA SUPERIOR CON ICONOS SOCIALES -->
+  <!-- BARRA SUPERIOR -->
   <div class="topbar">
     <div class="container">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <span class="mark"></span>
         GIREN GROUP
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-item active">Inicio</a>
+        <a href="portafolio.html" class="nav-item">Portafolio</a>
       </div>
       <div class="social-links">
         <!-- Facebook -->
@@ -890,255 +925,4 @@
         <div class="client-card"><span class="card-mark"></span>Plomería La Mano De Dios</div>
         <div class="client-card"><span class="card-mark"></span>Multiservicios Briñez</div>
         <div class="client-card"><span class="card-mark"></span>Multiservicios Linares</div>
-        <div class="client-card"><span class="card-mark"></span>Plomería Al Rescate</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BENEFICIOS EMOCIONALES -->
-  <section class="benefits">
-    <div class="container">
-      <h2><span class="mark"></span>Lo que cambia cuando dejas de depender del azar</h2>
-      <p class="lead">No se trata de métricas ni de marketing bonito. Se trata de cómo duermes, cómo pagas la nómina y cómo crece tu empresa cuando la captación funciona de verdad.</p>
-
-      <div class="item">
-        <div class="icon">💔</div>
-        <div>
-          <h3>Dejas de jugar a la ruleta con el sueldo de tus cuadrillas</h3>
-          <p>Si el teléfono no suena hoy, ¿qué hacen tus trabajadores mañana? Construimos un flujo constante de prospectos para que la incertidumbre se acabe.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="icon">😴</div>
-        <div>
-          <h3>Duermes tranquilo sabiendo que la nómina está cubierta</h3>
-          <p>Se acabó despertarte a las 3 de la mañana pensando en cómo pagar la próxima quincena. Con contratos agendados, la nómina deja de ser un fantasma.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="icon">🏆</div>
-        <div>
-          <h3>Tus cuadrillas te respetan porque siempre tienes trabajo para ellas</h3>
-          <p>Cuando el trabajo llega solo, tus mejores operarios se quedan. Dejas de rogarles que se queden y empiezas a ser la empresa donde quieren trabajar.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="icon">🎭</div>
-        <div>
-          <h3>Dejas de rogar por referidos y empiezas a elegir proyectos</h3>
-          <p>Los referidos son buenos, pero son incontrolables. Cuando tienes sistema, decides tú: qué proyecto tomas, cuál rechazas y cuánto vale tu trabajo.</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="icon">👑</div>
-        <div>
-          <h3>Recuperas el control: tú decides cuánto crecer</h3>
-          <p>Ya no dependes del humor del mercado ni del último cliente que se acordó de ti. Con un sistema que no descansa, tú marcas el ritmo de crecimiento de tu empresa.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MÉTRICAS -->
-  <section>
-    <div class="container">
-      <div class="metrics">
-        <h2><span class="mark"></span>Resultados reales</h2>
-        <p class="lead" style="color:#cccccc;">Datos promedio de empresas de servicios activas en los últimos 90 días.</p>
-        <div class="grid">
-          <div>
-            <div class="num">+47</div>
-            <div class="label">Contratos cerrados / mes</div>
-          </div>
-          <div>
-            <div class="num">-38%</div>
-            <div class="label">Costo por prospecto</div>
-          </div>
-          <div>
-            <div class="num">3.5x</div>
-            <div class="label">Retorno sobre inversión</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESO -->
-  <section class="process">
-    <div class="container">
-      <h2><span class="mark"></span>Cómo funciona</h2>
-      <p class="lead">Tres pasos. Sin complicaciones, sin teoría.</p>
-
-      <div class="step">
-        <div class="n">1</div>
-        <div>
-          <h3>Diagnóstico gratuito</h3>
-          <p>Analizamos tu operación actual y detectamos por qué tu captación depende del azar. Recibes un informe claro en 48h.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="n">2</div>
-        <div>
-          <h3>Plan de captación</h3>
-          <p>Diseñamos un sistema que trae prospectos calificados todos los días, sin que dependas de referidos ni del boca a boca.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="n">3</div>
-        <div>
-          <h3>Ejecución y escalado</h3>
-          <p>Ejecutamos, medimos y optimizamos cada semana. Cuando el sistema funciona, escalamos. Cuando no, ajustamos hasta que sí.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARA QUIÉN ES -->
-  <section>
-    <div class="container">
-      <div class="fit">
-        <h2><span class="mark"></span>¿Es para ti?</h2>
-        <p class="lead">No trabajamos con cualquiera. Preferimos ser honestos desde el inicio.</p>
-
-        <div class="cols">
-          <div class="yes">
-            <h3 class="yes-title">✓ Es para ti si…</h3>
-            <ul>
-              <li>Tienes una empresa de plomería, mantenimiento o servicios técnicos</li>
-              <li>Ya tienes cuadrillas trabajando o quieres tenerlas</li>
-              <li>Dependes del boca a boca y quieres dejar de hacerlo</li>
-              <li>Buscas un socio, no un proveedor</li>
-            </ul>
-          </div>
-          <div class="no">
-            <h3 class="no-title">✕ No es para ti si…</h3>
-            <ul>
-              <li>Eres un técnico independiente sin equipo</li>
-              <li>Buscas el resultado más barato</li>
-              <li>No puedes invertir al menos $1.000/mes en captación</li>
-              <li>Quieres "probar suerte" un mes</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq">
-    <div class="container">
-      <h2><span class="mark"></span>Preguntas frecuentes</h2>
-      <p class="lead">Las dudas que todos tienen antes de dar el paso.</p>
-
-      <div class="item">
-        <button class="q">¿El diagnóstico es realmente gratis? <span class="arrow">▼</span></button>
-        <div class="a"><p>Sí, 100% gratis y sin compromiso. Si después del diagnóstico no hay fit, te lo decimos con honestidad y no volvemos a insistir.</p></div>
-      </div>
-
-      <div class="item">
-        <button class="q">¿En cuánto tiempo se ven contratos nuevos? <span class="arrow">▼</span></button>
-        <div class="a"><p>Los primeros prospectos calificados llegan en 2-3 semanas. Contratos sostenidos y predecibles, entre 60 y 90 días. Cualquiera que te prometa contratos en 7 días te está mintiendo.</p></div>
-      </div>
-
-      <div class="item">
-        <button class="q">¿Cuánto cobran por el sistema? <span class="arrow">▼</span></button>
-        <div class="a"><p>Depende del tamaño de tu operación y tus objetivos. En el diagnóstico te damos el número exacto. Trabajamos con fee fijo mensual, sin comisiones ocultas sobre la inversión publicitaria.</p></div>
-      </div>
-
-      <div class="item">
-        <button class="q">¿Hay contrato mínimo? <span class="arrow">▼</span></button>
-        <div class="a"><p>Pedimos un mínimo de 3 meses. La captación requiere tiempo para optimizar. Trabajar menos que eso es tirar el dinero.</p></div>
-      </div>
-
-      <div class="item">
-        <button class="q">¿Sirve para mi tipo de servicio? <span class="arrow">▼</span></button>
-        <div class="a"><p>Trabajamos con plomería, mantenimiento, electricidad, aire acondicionado, obra civil y servicios técnicos en general. Si tu caso es muy específico, te lo decimos en el diagnóstico.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA FINAL -->
-  <section class="final-cta">
-    <div class="container">
-      <h2>¿Listo para que tu facturación <span class="highlight">deje de depender del azar</span>?</h2>
-      <p>Agenda tu diagnóstico gratuito ahora. En 48h sabrás exactamente qué está frenando tu captación de contratos.</p>
-      <a href="https://wa.me/584246218802?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20para%20captar%20contratos" target="_blank" rel="noopener noreferrer" class="cta-primary">Agendar por WhatsApp →</a>
-      <p class="micro">Respuesta en menos de 24h · Sin compromiso</p>
-    </div>
-  </section>
-
-  <!-- FOOTER CON ICONOS SOCIALES -->
-  <footer>
-    <div class="container">
-      <div class="footer-social">
-        <a href="https://facebook.com/girengroup" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Giren Group">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-          </svg>
-        </a>
-        <a href="https://tiktok.com/@girengroup" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Giren Group">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-          </svg>
-        </a>
-      </div>
-      <div class="footer-copy">
-        © 2026 Giren Group · Todos los derechos reservados
-      </div>
-    </div>
-  </footer>
-
-  <!-- CTA STICKY SOLO EN MOBILE -->
-  <div class="sticky-cta">
-    <a href="https://wa.me/584246218802?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20para%20captar%20contratos" target="_blank" rel="noopener noreferrer">Diagnóstico gratis</a>
-  </div>
-
-  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
-  <a
-    href="https://wa.me/584246218802?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20para%20captar%20contratos"
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Escríbenos por WhatsApp"
-  >
-    <span class="tooltip">Hablamos por WhatsApp</span>
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-    </svg>
-  </a>
-
-  <script>
-    // FAQ acordeón
-    document.querySelectorAll('.faq .q').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const wasOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq .item').forEach(i => i.classList.remove('open'));
-        if (!wasOpen) item.classList.add('open');
-      });
-    });
-
-    // ============================================================
-    // META PIXEL: Rastreo de conversiones en clics de WhatsApp
-    // ============================================================
-    // Este bloque detecta CADA clic en cualquier botón que lleve a
-    // wa.me y dispara el evento 'Contact' a Meta. Así tus campañas
-    // pueden optimizar hacia personas que realmente te escriben.
-    // ============================================================
-    document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
-      link.addEventListener('click', function() {
-        if (typeof fbq === 'function') {
-          fbq('track', 'Contact');
-        }
-      });
-    });
-  </script>
-
-</body>
-</html>
+        <div class="client-card"><span
