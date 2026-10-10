@@ -1,1 +1,45 @@
+backend:
+  name: git-gateway
+  branch: main
 
+media_folder: "assets/portafolio"
+public_folder: "/assets/portafolio"
+
+collections:
+  - name: "portafolio"
+    label: "Portafolio"
+    label_singular: "Trabajo"
+    folder: "contenido/portafolio"
+    create: true
+    fields:
+      - label: "Titulo del trabajo"
+        name: "title"
+        widget: "string"
+      - label: "Cliente"
+        name: "cliente"
+        widget: "string"
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options:
+          - "video"
+          - "image"
+          - "reels"
+          - "ads"
+      - label: "Descripcion"
+        name: "desc"
+        widget: "text"
+      - label: "Tipo de archivo"
+        name: "type"
+        widget: "select"
+        options:
+          - "image"
+          - "video"
+      - label: "Imagen"
+        name: "src"
+        widget: "image"
+        required: false
+      - label: "Enlace YouTube"
+        name: "embed"
+        widget: "string"
+        required: false
