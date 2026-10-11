@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Giren Group | Sistema de Contratos para Empresas de Servicios</title>
-  <meta name="description" content="El boca a boca no paga la nómina de tus cuadrillas. Sistema de captación de contratos para empresas de plomería y mantenimiento." />
+  <title>Giren Group | Publicidad Digital que Genera Leads Calificados</title>
+  <meta name="description" content="Agencia de publicidad digital especializada en Meta Ads para empresas de plomería y mantenimiento. Aseguramos leads calificados que se convierten en contratos." />
 
-  <!-- ============================================================ -->
-  <!-- META PIXEL CODE - GIREN GROUP                                -->
-  <!-- ============================================================ -->
+  <!-- META PIXEL -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -24,9 +22,6 @@
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1090436270626395&ev=PageView&noscript=1"
   /></noscript>
-  <!-- ============================================================ -->
-  <!-- END META PIXEL CODE                                          -->
-  <!-- ============================================================ -->
 
   <style>
     /* ---------- RESET Y BASE ---------- */
@@ -54,8 +49,12 @@
       padding: 16px 0;
       border-bottom: 2px solid #111;
       background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 50;
     }
     .topbar .container {
+      max-width: 1100px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -78,7 +77,31 @@
       background: #FFD400;
     }
 
-    /* ---------- ICONOS SOCIALES EN TOPBAR ---------- */
+    /* ---------- NAVEGACIÓN ---------- */
+    .topbar .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .topbar .nav-links a.nav-item {
+      font-size: 0.9rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 8px 14px;
+      border-radius: 4px;
+      color: #111;
+      transition: background .15s ease, color .15s ease;
+    }
+    .topbar .nav-links a.nav-item:hover {
+      background: #FFD400;
+    }
+    .topbar .nav-links a.nav-item.active {
+      background: #111;
+      color: #FFD400;
+    }
+
+    /* ---------- ICONOS SOCIALES ---------- */
     .topbar .social-links {
       display: flex;
       align-items: center;
@@ -106,10 +129,10 @@
       fill: currentColor;
     }
 
-    /* ---------- FRANJA AMARILLA DE URGENCIA ---------- */
+    /* ---------- FRANJA AMARILLA ---------- */
     .urgency-strip {
       background: #FFD400;
-      color: #111111;
+      color: #111;
       padding: 18px 0;
       text-align: center;
       font-size: 1.4rem;
@@ -138,8 +161,6 @@
       animation: blink 1.5s infinite;
       flex-shrink: 0;
     }
-    .urgency-strip .text { line-height: 1.2; }
-
     .urgency-strip::before {
       content: "";
       position: absolute;
@@ -177,16 +198,25 @@
       left: -10%;
       right: -10%;
       height: 22px;
-      background: repeating-linear-gradient(
-        45deg,
-        #FFD400,
-        #FFD400 20px,
-        #111 20px,
-        #111 40px
-      );
+      background: repeating-linear-gradient(45deg, #FFD400, #FFD400 20px, #111 20px, #111 40px);
       z-index: 1;
     }
     .hero .container { position: relative; z-index: 2; padding-top: 20px; }
+
+    /* Badge de aclaración */
+    .hero .hero-badge {
+      display: inline-block;
+      background: #FFD400;
+      color: #111;
+      font-size: 0.95rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      margin-bottom: 24px;
+      border: 2px solid #111;
+    }
 
     .hero h1 {
       font-size: clamp(2rem, 6vw, 3.25rem);
@@ -207,10 +237,12 @@
     .hero p.sub {
       font-size: 1.25rem;
       color: #d4d4d4;
-      max-width: 620px;
+      max-width: 640px;
       margin: 0 auto 36px;
       line-height: 1.6;
     }
+    .hero p.sub strong { color: #FFD400; }
+
     .cta-primary {
       display: inline-block;
       background: #FFD400;
@@ -221,7 +253,7 @@
       border-radius: 4px;
       border: 2px solid #FFD400;
       cursor: pointer;
-      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      transition: transform .15s ease, box-shadow .15s ease;
       box-shadow: 0 8px 0 #b39400;
       width: 100%;
       max-width: 480px;
@@ -243,7 +275,7 @@
       margin-top: 20px;
     }
 
-    /* ---------- PRUEBA SOCIAL CON CARRUSEL ---------- */
+    /* ---------- PRUEBA SOCIAL ---------- */
     .social-proof {
       padding: 44px 0;
       text-align: center;
@@ -260,7 +292,6 @@
       letter-spacing: 2px;
       font-weight: 800;
     }
-
     .marquee {
       position: relative;
       width: 100%;
@@ -275,14 +306,11 @@
       animation: scroll-left 28s linear infinite;
       padding: 4px 0;
     }
-    .marquee:hover .marquee-track {
-      animation-play-state: paused;
-    }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
     @keyframes scroll-left {
       0%   { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-
     .client-card {
       flex-shrink: 0;
       display: flex;
@@ -337,7 +365,7 @@
     }
 
     /* ---------- BENEFICIOS ---------- */
-    .benefits { background: #ffffff; }
+    .benefits { background: #fff; }
     .benefits .item {
       display: flex;
       gap: 20px;
@@ -472,16 +500,10 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 10px;
-      background: repeating-linear-gradient(
-        45deg,
-        #FFD400,
-        #FFD400 14px,
-        #111 14px,
-        #111 28px
-      );
+      background: repeating-linear-gradient(45deg, #FFD400, #FFD400 14px, #111 14px, #111 28px);
     }
     .fit h2 { color: #fff; display: flex; align-items: center; }
-    .fit .lead { color: #cccccc; }
+    .fit .lead { color: #ccc; }
     .fit .cols {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -576,7 +598,7 @@
       padding-bottom: 22px;
     }
 
-    /* ---------- SECCIÓN CTA FINAL ---------- */
+    /* ---------- CTA FINAL ---------- */
     .final-cta {
       background: #111;
       padding: 72px 0;
@@ -591,13 +613,7 @@
       left: -10%;
       right: -10%;
       height: 20px;
-      background: repeating-linear-gradient(
-        45deg,
-        #FFD400,
-        #FFD400 18px,
-        #111 18px,
-        #111 36px
-      );
+      background: repeating-linear-gradient(45deg, #FFD400, #FFD400 18px, #111 18px, #111 36px);
     }
     .final-cta::before { top: 0; }
     .final-cta::after  { bottom: 0; }
@@ -624,9 +640,7 @@
       margin: 0 auto 32px;
       line-height: 1.6;
     }
-    .final-cta .cta-primary {
-      max-width: 480px;
-    }
+    .final-cta .cta-primary { max-width: 480px; }
     .final-cta .micro {
       color: #999;
       font-size: 0.95rem;
@@ -656,12 +670,11 @@
       background: #FFD400;
       color: #111;
       border-radius: 4px;
-      transition: transform .15s ease, background .15s ease, color .15s ease;
+      transition: transform .15s ease, background .15s ease;
     }
     footer .footer-social a:hover {
       transform: translateY(-3px);
       background: #fff;
-      color: #111;
     }
     footer .footer-social svg {
       width: 24px;
@@ -704,7 +717,7 @@
       letter-spacing: 0.5px;
     }
 
-    /* ---------- BOTÓN FLOTANTE WHATSAPP ---------- */
+    /* ---------- WHATSAPP FLOTANTE ---------- */
     .whatsapp-float {
       position: fixed;
       right: 20px;
@@ -764,7 +777,7 @@
       transform: translateX(0);
     }
 
-    /* ---------- AJUSTES MOBILE ---------- */
+    /* ---------- MOBILE ---------- */
     @media (max-width: 640px) {
       .whatsapp-float {
         right: 16px;
@@ -780,13 +793,11 @@
         padding: 14px 0;
         letter-spacing: 0.3px;
       }
-      .urgency-strip .dot {
-        width: 10px;
-        height: 10px;
-      }
+      .urgency-strip .dot { width: 10px; height: 10px; }
 
       .hero p.sub { font-size: 1.15rem; }
       .hero h1 { font-size: 1.9rem; }
+      .hero .hero-badge { font-size: 0.8rem; padding: 8px 14px; }
 
       .benefits .item {
         padding: 20px;
@@ -800,7 +811,12 @@
       }
       .benefits h3 { font-size: 1.1rem; }
 
-      .topbar .logo { font-size: 1.25rem; }
+      .topbar .logo { font-size: 1.15rem; }
+      .topbar .nav-links a.nav-item {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        letter-spacing: 0.5px;
+      }
       .topbar .social-links a {
         width: 34px;
         height: 34px;
@@ -827,21 +843,23 @@
 </head>
 <body>
 
-  <!-- BARRA SUPERIOR CON ICONOS SOCIALES -->
+  <!-- BARRA SUPERIOR -->
   <div class="topbar">
     <div class="container">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <span class="mark"></span>
         GIREN GROUP
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-item active">Inicio</a>
+        <a href="portafolio.html" class="nav-item">Portafolio</a>
       </div>
       <div class="social-links">
-        <!-- Facebook -->
         <a href="https://facebook.com/girengroup" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Giren Group">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
           </svg>
         </a>
-        <!-- TikTok -->
         <a href="https://tiktok.com/@girengroup" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Giren Group">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
@@ -851,7 +869,7 @@
     </div>
   </div>
 
-  <!-- FRANJA AMARILLA DE URGENCIA -->
+  <!-- FRANJA AMARILLA -->
   <div class="urgency-strip">
     <div class="container">
       <span class="dot"></span>
@@ -862,29 +880,27 @@
   <!-- HERO -->
   <header class="hero">
     <div class="container">
-      <h1>El <span class="highlight">boca a boca</span> no paga la nómina de tus cuadrillas</h1>
-      <p class="sub">Si tu empresa de plomería o mantenimiento depende solo de referidos, tu facturación es un juego de azar. Te mostramos cómo construir un flujo constante de contratos — sin depender de la suerte.</p>
+      <div class="hero-badge">Agencia de Publicidad Digital · Meta Ads</div>
+      <h1>Publicidad digital que <span class="highlight">asegura buenos leads</span> para tu empresa de servicios</h1>
+      <p class="sub">Somos una agencia especializada en <strong>Meta Ads</strong>. No vendemos humo: construimos campañas que traen <strong>leads calificados</strong> a tu negocio de plomería o mantenimiento, semana tras semana.</p>
       <a href="https://wa.me/584246218802?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20para%20captar%20contratos" target="_blank" rel="noopener noreferrer" class="cta-primary">Quiero mi diagnóstico gratis</a>
       <p class="micro">Sin compromiso · Respuesta en menos de 24h</p>
     </div>
   </header>
 
-  <!-- PRUEBA SOCIAL CON CARRUSEL ANIMADO -->
+  <!-- PRUEBA SOCIAL -->
   <div class="social-proof">
     <div class="container">
       <p class="section-label">Empresas que ya confían en nosotros</p>
     </div>
     <div class="marquee">
       <div class="marquee-track">
-        <!-- Bloque 1 -->
         <div class="client-card"><span class="card-mark"></span>Ases De La Emergencia, C.A</div>
         <div class="client-card"><span class="card-mark"></span>Multiservicios Camargo</div>
         <div class="client-card"><span class="card-mark"></span>Plomería La Mano De Dios</div>
         <div class="client-card"><span class="card-mark"></span>Multiservicios Briñez</div>
         <div class="client-card"><span class="card-mark"></span>Multiservicios Linares</div>
         <div class="client-card"><span class="card-mark"></span>Plomería Al Rescate</div>
-
-        <!-- Bloque 2 (duplicado para bucle infinito) -->
         <div class="client-card"><span class="card-mark"></span>Ases De La Emergencia, C.A</div>
         <div class="client-card"><span class="card-mark"></span>Multiservicios Camargo</div>
         <div class="client-card"><span class="card-mark"></span>Plomería La Mano De Dios</div>
@@ -895,17 +911,17 @@
     </div>
   </div>
 
-  <!-- BENEFICIOS EMOCIONALES -->
+  <!-- BENEFICIOS -->
   <section class="benefits">
     <div class="container">
       <h2><span class="mark"></span>Lo que cambia cuando dejas de depender del azar</h2>
-      <p class="lead">No se trata de métricas ni de marketing bonito. Se trata de cómo duermes, cómo pagas la nómina y cómo crece tu empresa cuando la captación funciona de verdad.</p>
+      <p class="lead">No se trata de métricas ni de marketing bonito. Se trata de cómo duermes, cómo pagas la nómina y cómo crece tu empresa cuando la captación de leads funciona de verdad.</p>
 
       <div class="item">
         <div class="icon">💔</div>
         <div>
           <h3>Dejas de jugar a la ruleta con el sueldo de tus cuadrillas</h3>
-          <p>Si el teléfono no suena hoy, ¿qué hacen tus trabajadores mañana? Construimos un flujo constante de prospectos para que la incertidumbre se acabe.</p>
+          <p>Si el teléfono no suena hoy, ¿qué hacen tus trabajadores mañana? Creamos campañas que generan leads constantes para que la incertidumbre se acabe.</p>
         </div>
       </div>
 
@@ -913,7 +929,7 @@
         <div class="icon">😴</div>
         <div>
           <h3>Duermes tranquilo sabiendo que la nómina está cubierta</h3>
-          <p>Se acabó despertarte a las 3 de la mañana pensando en cómo pagar la próxima quincena. Con contratos agendados, la nómina deja de ser un fantasma.</p>
+          <p>Se acabó despertarte a las 3 de la mañana pensando en cómo pagar la próxima quincena. Con leads entrando todos los días, la nómina deja de ser un fantasma.</p>
         </div>
       </div>
 
@@ -921,7 +937,7 @@
         <div class="icon">🏆</div>
         <div>
           <h3>Tus cuadrillas te respetan porque siempre tienes trabajo para ellas</h3>
-          <p>Cuando el trabajo llega solo, tus mejores operarios se quedan. Dejas de rogarles que se queden y empiezas a ser la empresa donde quieren trabajar.</p>
+          <p>Cuando los leads llegan solos, tus mejores operarios se quedan. Dejas de rogarles que se queden y empiezas a ser la empresa donde quieren trabajar.</p>
         </div>
       </div>
 
@@ -929,7 +945,7 @@
         <div class="icon">🎭</div>
         <div>
           <h3>Dejas de rogar por referidos y empiezas a elegir proyectos</h3>
-          <p>Los referidos son buenos, pero son incontrolables. Cuando tienes sistema, decides tú: qué proyecto tomas, cuál rechazas y cuánto vale tu trabajo.</p>
+          <p>Los referidos son buenos, pero son incontrolables. Con una campaña de Meta Ads bien hecha, decides tú: qué proyecto tomas, cuál rechazas y cuánto vale tu trabajo.</p>
         </div>
       </div>
 
@@ -937,7 +953,7 @@
         <div class="icon">👑</div>
         <div>
           <h3>Recuperas el control: tú decides cuánto crecer</h3>
-          <p>Ya no dependes del humor del mercado ni del último cliente que se acordó de ti. Con un sistema que no descansa, tú marcas el ritmo de crecimiento de tu empresa.</p>
+          <p>Ya no dependes del humor del mercado ni del último cliente que se acordó de ti. Con publicidad digital que no descansa, tú marcas el ritmo de crecimiento de tu empresa.</p>
         </div>
       </div>
     </div>
@@ -948,15 +964,15 @@
     <div class="container">
       <div class="metrics">
         <h2><span class="mark"></span>Resultados reales</h2>
-        <p class="lead" style="color:#cccccc;">Datos promedio de empresas de servicios activas en los últimos 90 días.</p>
+        <p class="lead" style="color:#cccccc;">Datos promedio de nuestras campañas de Meta Ads para empresas de servicios en los últimos 90 días.</p>
         <div class="grid">
           <div>
             <div class="num">+47</div>
-            <div class="label">Contratos cerrados / mes</div>
+            <div class="label">Leads calificados / mes</div>
           </div>
           <div>
             <div class="num">-38%</div>
-            <div class="label">Costo por prospecto</div>
+            <div class="label">Costo por lead</div>
           </div>
           <div>
             <div class="num">3.5x</div>
@@ -977,15 +993,15 @@
         <div class="n">1</div>
         <div>
           <h3>Diagnóstico gratuito</h3>
-          <p>Analizamos tu operación actual y detectamos por qué tu captación depende del azar. Recibes un informe claro en 48h.</p>
+          <p>Analizamos tu cuenta publicitaria actual y detectamos por qué tu captación de leads no está funcionando. Recibes un informe claro en 48h.</p>
         </div>
       </div>
 
       <div class="step">
         <div class="n">2</div>
         <div>
-          <h3>Plan de captación</h3>
-          <p>Diseñamos un sistema que trae prospectos calificados todos los días, sin que dependas de referidos ni del boca a boca.</p>
+          <h3>Estrategia y campaña</h3>
+          <p>Diseñamos una campaña de Meta Ads a la medida: audiencia, creativos, mensajes y presupuesto. Todo apuntando a un solo objetivo: leads calificados.</p>
         </div>
       </div>
 
@@ -993,7 +1009,7 @@
         <div class="n">3</div>
         <div>
           <h3>Ejecución y escalado</h3>
-          <p>Ejecutamos, medimos y optimizamos cada semana. Cuando el sistema funciona, escalamos. Cuando no, ajustamos hasta que sí.</p>
+          <p>Ejecutamos, medimos y optimizamos cada semana. Cuando el sistema funciona, escalamos el presupuesto. Cuando no, ajustamos hasta que sí.</p>
         </div>
       </div>
     </div>
@@ -1012,8 +1028,8 @@
             <ul>
               <li>Tienes una empresa de plomería, mantenimiento o servicios técnicos</li>
               <li>Ya tienes cuadrillas trabajando o quieres tenerlas</li>
-              <li>Dependes del boca a boca y quieres dejar de hacerlo</li>
-              <li>Buscas un socio, no un proveedor</li>
+              <li>Quieres dejar de depender del boca a boca</li>
+              <li>Buscas un socio estratégico, no un proveedor</li>
             </ul>
           </div>
           <div class="no">
@@ -1021,7 +1037,7 @@
             <ul>
               <li>Eres un técnico independiente sin equipo</li>
               <li>Buscas el resultado más barato</li>
-              <li>No puedes invertir al menos $1.000/mes en captación</li>
+              <li>No puedes invertir al menos $1.000/mes en publicidad</li>
               <li>Quieres "probar suerte" un mes</li>
             </ul>
           </div>
@@ -1042,18 +1058,18 @@
       </div>
 
       <div class="item">
-        <button class="q">¿En cuánto tiempo se ven contratos nuevos? <span class="arrow">▼</span></button>
-        <div class="a"><p>Los primeros prospectos calificados llegan en 2-3 semanas. Contratos sostenidos y predecibles, entre 60 y 90 días. Cualquiera que te prometa contratos en 7 días te está mintiendo.</p></div>
+        <button class="q">¿En cuánto tiempo se ven leads nuevos? <span class="arrow">▼</span></button>
+        <div class="a"><p>Los primeros leads calificados llegan en 2-3 semanas. Resultados sostenidos y predecibles, entre 60 y 90 días. Cualquiera que te prometa leads en 7 días te está mintiendo.</p></div>
       </div>
 
       <div class="item">
-        <button class="q">¿Cuánto cobran por el sistema? <span class="arrow">▼</span></button>
+        <button class="q">¿Cuánto cobran por el servicio? <span class="arrow">▼</span></button>
         <div class="a"><p>Depende del tamaño de tu operación y tus objetivos. En el diagnóstico te damos el número exacto. Trabajamos con fee fijo mensual, sin comisiones ocultas sobre la inversión publicitaria.</p></div>
       </div>
 
       <div class="item">
         <button class="q">¿Hay contrato mínimo? <span class="arrow">▼</span></button>
-        <div class="a"><p>Pedimos un mínimo de 3 meses. La captación requiere tiempo para optimizar. Trabajar menos que eso es tirar el dinero.</p></div>
+        <div class="a"><p>Pedimos un mínimo de 3 meses. La publicidad digital requiere tiempo para optimizar. Trabajar menos que eso es tirar el dinero.</p></div>
       </div>
 
       <div class="item">
@@ -1066,14 +1082,14 @@
   <!-- CTA FINAL -->
   <section class="final-cta">
     <div class="container">
-      <h2>¿Listo para que tu facturación <span class="highlight">deje de depender del azar</span>?</h2>
-      <p>Agenda tu diagnóstico gratuito ahora. En 48h sabrás exactamente qué está frenando tu captación de contratos.</p>
+      <h2>¿Listo para tener un <span class="highlight">flujo constante de leads calificados</span>?</h2>
+      <p>Agenda tu diagnóstico gratuito ahora. En 48h sabrás exactamente qué está frenando tus campañas y cómo arreglarlo.</p>
       <a href="https://wa.me/584246218802?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20para%20captar%20contratos" target="_blank" rel="noopener noreferrer" class="cta-primary">Agendar por WhatsApp →</a>
       <p class="micro">Respuesta en menos de 24h · Sin compromiso</p>
     </div>
   </section>
 
-  <!-- FOOTER CON ICONOS SOCIALES -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-social">
@@ -1089,17 +1105,17 @@
         </a>
       </div>
       <div class="footer-copy">
-        © 2026 Giren Group · Todos los derechos reservados
+        © 2026 Giren Group · Agencia de Publicidad Digital
       </div>
     </div>
   </footer>
 
-  <!-- CTA STICKY SOLO EN MOBILE -->
+  <!-- CTA STICKY MOBILE -->
   <div class="sticky-cta">
     <a href="https://wa.me/584246218802?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20para%20captar%20contratos" target="_blank" rel="noopener noreferrer">Diagnóstico gratis</a>
   </div>
 
-  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <!-- WHATSAPP FLOTANTE -->
   <a
     href="https://wa.me/584246218802?text=Hola%2C%20quiero%20mi%20diagn%C3%B3stico%20gratuito%20para%20captar%20contratos"
     class="whatsapp-float"
@@ -1124,13 +1140,7 @@
       });
     });
 
-    // ============================================================
-    // META PIXEL: Rastreo de conversiones en clics de WhatsApp
-    // ============================================================
-    // Este bloque detecta CADA clic en cualquier botón que lleve a
-    // wa.me y dispara el evento 'Contact' a Meta. Así tus campañas
-    // pueden optimizar hacia personas que realmente te escriben.
-    // ============================================================
+    // Meta Pixel - Contact en clics de WhatsApp
     document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
       link.addEventListener('click', function() {
         if (typeof fbq === 'function') {
